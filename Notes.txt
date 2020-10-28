@@ -1,0 +1,262 @@
+Deck Stack Puzzle Maniac:
+    - Grid based
+    - 2 "currencies":
+        - Buy cards with own max HP
+        - Buy cards with the life of slain enemies
+    - Build a Deck
+        - Cardlimit on a level
+            - Less turns on a level = better score
+        - Every turn player gets a card
+            - They can decide to play the card, or to put it on the bottom of the Deck
+        - Dead when cards are all used up, or <= 0 HP
+
+    - Enemies:
+        - Set movement/attack pattern
+
+    - Finishing level rewards max HP
+        - Fewer cards used => more HP reward
+        - HP is rewarded only once per level
+
+
+TODO:
+- Sprites:
+    - Angel
+    - Snake
+    - Plant
+    - Smallplant
+- Level rewards
+    - Unique
+- Levels unlocked
+    - possibly completed counter
+- Levels
+    - > 10
+- SFX
+- Balancing
+    - main balance class
+- Bugfixing
+- Menu center buttons
+- Damage "animation" on allies and player
+- Damage and other feedback
+- Tutorial
+- Currency overview
+- Usable ally currency
+- Logging
+- Starting deck & collection
+
+- Shiny plat cards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cards:
+
+Selfcast:
+    - Normal:
+        - Heal minor wounds
+            Heal yourself for 1 HP
+            Cost 15 E
+        - Stone Skin
+            Take 25% less damage for 2 turns (minimal of 1)
+            Cost: 5 E
+        - Reflex
+            Take 2 movements in random directions
+            Cost: 10 E
+        - Whirlwind
+            Moves back a random enemy in a 3x3 square
+            Cost: 5 E
+    - Silver: 
+        - Heal
+            Heal yourself for 2 HP
+            Cost: 10 HP
+        - Transfigure
+            Lose movement and casting for 2 turns and heal 150% of the damage dealt to you in that time
+            Cost: 10 HP
+    - Gold: 
+        - Demonic Pulse:
+            Deal 5 damage to yourself and 10 damage in an AoE around you in a 2sq diamond
+            Cost: 5 HP
+    - Platinum:
+        - Warp
+            Warps all enemies to a random location
+            Cost: 1 A
+        - Thundergod's Wrath
+            Deal (1-8) damage to all enemies
+            Cost: 3 A
+
+enemycast:
+    - Normal:
+        - Disposition
+            Teleport an enemy to a random position
+            Cost: 2 E
+        - Strike
+            Hit an adjecent enemy for 1 damage
+            Cost: 1 E
+        - Wild Magic
+            Deals 2 random damage hits on an enemy (1-3)
+            Cost: 5 E
+        - Ray of Frost
+            Deals 1 damage to an enemy and stuns them
+            Cost: 10 E
+    - Silver: 
+        - Assassination
+            Deal 5 damage to an enemy
+            Cost: 10 E
+        - Fury Swipes
+            Deal 1 damage to an enemy. This card has a 85% chance to recast on the target
+            Cost: 10 E
+        - Nether swap
+            Swaps positions with an enemy in 3 sq range
+            Cost: 5 HP
+    - Gold: 
+        - Sacrifice
+            Deal 5 damage to an enemy, and heal 2 HP
+            Cost 15 E
+        - Chained Energy
+            Deal 5 damage to an enemy. This card has a 50% chance to recast on an enemy in a 5x5 sq.
+            Cost: 8 HP
+        - Blood Rite
+            Deal 10 selfdamage, and 20 damage to the enemy
+            Cost: 30 E
+    - Platinum:
+        - Barge
+            Barge into an enemy (3sq range) and hit them for 10 damage
+            Cost: 1 A
+        - Endeavor
+            Sets the enemies HP equal to your own
+            Cost: 3 A
+
+aoecast:
+    - Normal:
+        - Mass Confusion
+            Enemies in a 5x5 get confused and move in a random direction.
+            Cost: 10 E
+        - Fire Wave
+            Deal (1-2) damage in a 3x3 diamond
+            Cost: 5 E
+    - Silver: 
+        - Unstable storm cloud
+            Deal 3 damage to random enemies in a 3x3 square
+            Cost: 20 E
+        - Ensnare
+            Stun all units in a 3x3 diamond
+            Cost: 15 E
+    - Gold: 
+        - Fireball
+            Deal 3 damage to enemies in a 3x3 square
+            Cost: 15 HP
+        - Petrify
+            Stuns enemies in a 3x3 square for 2 turns
+            Cost: 10 HP
+    - Platinum:
+        - Explosion
+            Deal 2d6 damage to anything in a 5x5 square
+            Cost: 2 A
+
+utilitycast:
+    - Normal:
+        - Surge
+            Grants an extra movement
+            Cost: 7 E
+        - Summon Wisp
+            Summons a Healing Wisp in a location that heals in a 3x3 square around it
+            Cost: 3 HP
+        - Healing word
+            Heals an ally for (1-3) HP
+            Cost: 10 E
+    - Silver: 
+        - Summon lesser creature
+            Summons an allied creature to fight for you
+            Cost: 5 HP
+    - Gold: 
+        - Blink
+            Teleport a short (3) distance
+            Cost: 20 HP
+    - Platinum:
+        - Summon Demon 
+            Lose 10 HP, summon a Demon
+            Cost: 2 A
+
+
+Normal: 13
+Silver: 8
+Gold: 7
+Platinum: 6
+
+Self: 9
+Enemy: 12
+Aoe: 7
+Utility: 6
+
+Enemy: 18
+HP: 9
+A: 6
+
+Damage: 9.5
+AoE: 5
+
+Tim: 
+Heal minor wounds
+Stone Skin
+Reflex
+Whirlwind
+Heal
+Transfigure
+Demonic Pulse
+Warp
+Thundergod's Wrath
+Disposition
+Strike
+Wild Magic
+
+Ilan:
+Ray of Frost
+Assassination
+Fury Swipes
+Nether Swap
+Sacrifice
+Chained Energy
+Blood Rite
+Barge
+Endeavor
+Mass Confusion
+Fire Wave
+
+Matthijs:
+Unstable Storm Cloud
+Ensnare
+Fireball
+Petrify
+Explosion
+Surge
+Summon Wisp
+Healing Word
+Summon Lesser Creature
+Blink
+Summon Demon

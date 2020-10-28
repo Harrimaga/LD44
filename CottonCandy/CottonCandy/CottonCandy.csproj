@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A7C43B1-151D-444A-ACC4-F15D401D2E12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CottonCandy</RootNamespace>
+    <AssemblyName>CottonCandy</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\matth\Documents\CottonCandy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A2DF2B636B95E60293A2D8D0C5BA69C99965BB7B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CottonCandy_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Allies\Demon.cs" />
+    <Compile Include="Allies\LesserCreature.cs" />
+    <Compile Include="Allies\Wisp.cs" />
+    <Compile Include="Ally.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="Buttons\DeckBuilderButton.cs" />
+    <Compile Include="Buttons\DiscardButton.cs" />
+    <Compile Include="Buttons\LevelSelectButton.cs" />
+    <Compile Include="Buttons\OpenShopButton.cs" />
+    <Compile Include="Buttons\OutDeckBuilderButton.cs" />
+    <Compile Include="Buttons\OutShopButton.cs" />
+    <Compile Include="Buttons\StartLevelButton.cs" />
+    <Compile Include="Buttons\TutorialButton.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CardBalance.cs" />
+    <Compile Include="Cards\Assassinate.cs" />
+    <Compile Include="Cards\Barge.cs" />
+    <Compile Include="Cards\Blink.cs" />
+    <Compile Include="Cards\BloodRite.cs" />
+    <Compile Include="Cards\ChainedEnergy.cs" />
+    <Compile Include="Cards\DemonicPulse.cs" />
+    <Compile Include="Cards\Disposition.cs" />
+    <Compile Include="Cards\Endeavor.cs" />
+    <Compile Include="Cards\Ensnare.cs" />
+    <Compile Include="Cards\Explosion.cs" />
+    <Compile Include="Cards\Fireball.cs" />
+    <Compile Include="Cards\FireWave.cs" />
+    <Compile Include="Cards\FurySwipes.cs" />
+    <Compile Include="Cards\Heal.cs" />
+    <Compile Include="Cards\MassConfusion.cs" />
+    <Compile Include="Cards\NetherSwap.cs" />
+    <Compile Include="Cards\RayOfFrost.cs" />
+    <Compile Include="Cards\Reflex.cs" />
+    <Compile Include="Cards\Sacrifice.cs" />
+    <Compile Include="Cards\HealMinorWounds.cs" />
+    <Compile Include="Cards\StoneSkin.cs" />
+    <Compile Include="Cards\HealingWord.cs" />
+    <Compile Include="Cards\Petrify.cs" />
+    <Compile Include="Cards\Strike.cs" />
+    <Compile Include="Cards\SummonDemon.cs" />
+    <Compile Include="Cards\SummonLesserCreature.cs" />
+    <Compile Include="Cards\SummonWisp.cs" />
+    <Compile Include="Cards\Surge.cs" />
+    <Compile Include="Cards\ThundergodsWrath.cs" />
+    <Compile Include="Cards\Transfigure.cs" />
+    <Compile Include="Cards\UnstableStormCloud.cs" />
+    <Compile Include="Cards\Warp.cs" />
+    <Compile Include="Cards\Whirlwind.cs" />
+    <Compile Include="Cards\WildMagic.cs" />
+    <Compile Include="CollectionUI.cs" />
+    <Compile Include="CombatLog.cs" />
+    <Compile Include="CottonCandy.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="Effect.cs" />
+    <Compile Include="Effects\StoneSkinEffect.cs" />
+    <Compile Include="Effects\Transfigured.cs" />
+    <Compile Include="Enemies\Angel.cs" />
+    <Compile Include="Enemies\Chicken.cs" />
+    <Compile Include="Enemies\Noob.cs" />
+    <Compile Include="Enemies\Plant.cs" />
+    <Compile Include="Enemies\SmallPlant.cs" />
+    <Compile Include="Enemies\Snake.cs" />
+    <Compile Include="FileLoader.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Hotkey.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="LevelEditor.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="LevelSelect.cs" />
+    <Compile Include="LoadTex.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop.cs" />
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="Tilegrid.cs" />
+    <Compile Include="Unit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="CottonCandy_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
